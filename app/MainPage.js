@@ -8,44 +8,47 @@ import Output from "./Output";
 @observer
 class MainPage extends Component {
 
+	// TODO: recognizes pressed key but except for enter nothing happens
+	// TODO: only recognizes key if input1 not empty
 	keyboardNumber(key) {
 		// if (key == "Enter") {
-		// 	stateStore.calculate();
+		// 	Input.calculate();
 		// }
 
 		switch(key) {
 		case 13:
-			stateStore.calculate();
+			Input.calculate();
 			break;
-
+		
+		case 0:
 		case 48:
 			Input.inputNumber(0);
 			break;
-		case 49:
+		case 1:
 			Input.inputNumber(1);
 			break;
-		case 50:
+		case 2:
 			Input.inputNumber(2);
 			break;
-		case 51:
+		case 3:
 			Input.inputNumber(3);
 			break;
-		case 52:
+		case 4:
 			Input.inputNumber(4);
 			break;
-		case 53:
+		case 5:
 			Input.inputNumber(5);
 			break;
-		case 54:
+		case 6:
 			Input.inputNumber(6);
 			break;
-		case 55:
+		case 7:
 			Input.inputNumber(7);
 			break;
-		case 56:
+		case 8:
 			Input.inputNumber(8);
 			break;
-		case 57:
+		case 9:
 			Input.inputNumber(9);
 			break;
 
@@ -61,12 +64,17 @@ class MainPage extends Component {
 		case 47:
 			stateStore.method = "/";
 			break;
-		}
+		default:
+			console.log("something broke switch keyboardNumber");
+			break;
+		} 
+		console.log("testing keyboardNumber: " + key);
 	}
+	
 
 	render () {
 		return (
-			<div className="MainPage" onKeyPress={(key) => this.keyboardNumber(key)} >
+			<div className="MainPage" onKeyPress={(event) => this.keyboardNumber(event.key)} >
 				<Title>Calculator</Title>
 				<Input />
 				<Output />

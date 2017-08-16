@@ -7,23 +7,6 @@ class StateStore  {
 @observable method = ""
 @observable result = ""
 
-
-	@observer
-	calculate(method) {
-		if (method == "+") {
-			this.result = this.numberInput1 + this.numberInput2;
-		}
-		else if (method == "-") {
-			this.result = this.numberInput1 - this.numberInput2;
-		}
-		else if (method == "*") {
-			this.result = this.numberInput1 * this.numberInput2;
-		}
-		else if (method == "/") {
-			this.result = this.numberInput1 / this.numberInput2;
-		}
-	}
-
 }
 
 const stateStore = new StateStore();

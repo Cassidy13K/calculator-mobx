@@ -9,6 +9,11 @@ const Button = styled.button`
 	cursor: pointer;
 `;
 
+const InputDiv = styled.div`
+text-align: center;
+margin: auto;
+`;
+
 const P = styled.p `
 	font-size: 25px;
 	text-align: center;
@@ -20,4 +25,4 @@ const Title = P.extend `
 	font-size: 50px;
 `;
 
-export {Button, P, Title};
+export {Button, P, Title, InputDiv};
