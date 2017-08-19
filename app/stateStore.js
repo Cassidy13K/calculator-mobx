@@ -6,7 +6,6 @@ class StateStore  {
 @observable numberInput2 = ""
 @observable method = ""
 @observable result = ""
-
 }
 
 const stateStore = new StateStore();

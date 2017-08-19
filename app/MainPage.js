@@ -4,6 +4,7 @@ import stateStore from "./stateStore";
 import {Title} from "./style";
 import Input from "./Input";
 import Output from "./Output";
+import { inputNumber, inputMethod, calculate }from "./StoreModifiers";
 
 @observer
 class MainPage extends Component {
@@ -17,52 +18,51 @@ class MainPage extends Component {
 
 		switch(key) {
 		case 13:
-			Input.calculate();
+			calculate();
 			break;
 		
 		case 0:
-		case 48:
-			Input.inputNumber(0);
+			inputNumber(0);
 			break;
 		case 1:
-			Input.inputNumber(1);
+			inputNumber(1);
 			break;
 		case 2:
-			Input.inputNumber(2);
+			inputNumber(2);
 			break;
 		case 3:
-			Input.inputNumber(3);
+			inputNumber(3);
 			break;
 		case 4:
-			Input.inputNumber(4);
+			inputNumber(4);
 			break;
 		case 5:
-			Input.inputNumber(5);
+			inputNumber(5);
 			break;
 		case 6:
-			Input.inputNumber(6);
+			inputNumber(6);
 			break;
 		case 7:
-			Input.inputNumber(7);
+			inputNumber(7);
 			break;
 		case 8:
-			Input.inputNumber(8);
+			inputNumber(8);
 			break;
 		case 9:
-			Input.inputNumber(9);
+			inputNumber(9);
 			break;
 
 		case 43:
-			stateStore.method = "+";
+			inputMethod("+");
 			break;
 		case 45:
-			stateStore.method = "-";
+			inputMethod("-");
 			break;
 		case 42:
-			stateStore.method = "*";
+			inputMethod("*");
 			break;
 		case 47:
-			stateStore.method = "/";
+			inputMethod("/");
 			break;
 		default:
 			console.log("something broke switch keyboardNumber");

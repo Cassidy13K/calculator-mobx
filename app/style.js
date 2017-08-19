@@ -7,6 +7,14 @@ const Button = styled.button`
 	border: 2px solid palevioletred;
 	border-radius: 3px;
 	cursor: pointer;
+
+	:hover {
+		transform: scale(1.1);
+	}
+
+	:active {
+		background-color: palevioletred;
+	}
 `;
 
 const InputDiv = styled.div`
